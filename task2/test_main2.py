@@ -1,9 +1,10 @@
 import pytest
 import requests 
+from config.config import TOKEN
 
 class TestYandexDisk:
     def setup_method(self):
-        self.headers = {'Authorization':'OAuth y0_AgAAAAAqeAwuAADLWwAAAAD0Wukw2aj3ttNZQk2NBLxrFcmwRs8bDno'}
+        self.headers = {'Authorization':TOKEN}
 
     @pytest.mark.parametrize ('param,value,status',
                               (['path','Image',201],
